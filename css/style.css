@@ -1,0 +1,29 @@
+:root{
+    --primary-color: #3347B0;
+    --secondary-color : #8E4106;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+header{
+    grid-area: "header";
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--primary-color)
+}
+main{
+    grid-area: "main";
+    display: flex;
+}
+footer{
+    grid-area: "footer";
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--primary-color)
+}
