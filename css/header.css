@@ -1,0 +1,9 @@
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+.logo p{
+    max-width: 26px;
+}

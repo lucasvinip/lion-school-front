@@ -3,6 +3,7 @@
     --secondary-color : #8E4106;
 }
 body{
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-areas: 
     "header"
@@ -10,11 +11,14 @@ body{
     "footer";
 }
 header{
+    color: #fff;
     grid-area: "header";
     display: flex;
+    justify-content: space-between;
     height: 10vh;
     width: 100%;
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
+    align-items: center;
 }
 main{
     grid-area: "main";
