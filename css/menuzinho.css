@@ -39,16 +39,14 @@ nav {
 }
 
 .menu li a {
-    color: var(--primary-color);
+    color: #fff;
     text-decoration: none;
     padding: 5px 10px;
     display: block;
 }
 
 .menu li a:hover {
-    background: var(--primary-color);
-    color: #fff;
-
+    color: var(--secondary-color);
 }
 
 .menu li ul {

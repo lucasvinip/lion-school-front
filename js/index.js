@@ -1,10 +1,9 @@
 'use strict'
 
-import { alunos } from './alunos.js'
+// import { alunos } from './alunos.js'
 
 let cont = 0
 
-console.log(alunos[0].nome);
 
 const criarCard = (aluno) =>{
     
@@ -14,7 +13,7 @@ const criarCard = (aluno) =>{
 
     const img = document.createElement('img')
     img.classList.add('card__image')
-    img.src = `${alunos[cont].foto}`
+    img.src = `${aluno_nome}`
 
     const nome = document.createElement('h5')
     nome.classList.add('card__name')
@@ -30,11 +29,16 @@ const criarCard = (aluno) =>{
 }
 
 
-const carregarProdutos = () =>{
-    const container = document.getElementById('container')
-    const cards = alunos.map(criarCard)
+const listarAlunos = async () =>{
+     const container = document.getElementById('container_buttons')
+    // const cards = alunos.map(criarCard)
+
+    const url = `http://localhost:8080/v1/lion-school/alunos`
+    const response = await fetch(url)
+    const cards = await response.json()
+
 
     container.replaceChildren(...cards)
 }
 
-carregarProdutos()
+listarAlunos()

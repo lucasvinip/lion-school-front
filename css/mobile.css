@@ -4,7 +4,7 @@
     }
     .legenda{
         flex-direction: column;
-        height: 10vh;
+        height: 100%;
     }
     main{
         display: flex;

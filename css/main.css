@@ -11,7 +11,7 @@ main h1{
 .person{
     height: 450px;
 }
-button{
+.card_button{
     color: #fff;
     height: 200px;
     width: 400px;
