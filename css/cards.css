@@ -1,0 +1,31 @@
+.card{
+    height: 300px;
+    width: 200px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card__image{
+    display: flex;
+    height: 200px;
+}
+.container{
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+    padding: 10vh;
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
+}
+.blue-block {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.596);
+    background-color: var(--primary-color);
+}
+
+.yellow-block {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.749);
+    background-color: var(--secondary-color);
+}

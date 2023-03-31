@@ -1,0 +1,22 @@
+.card{
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card__image{
+    display: flex;
+    height: 400px;
+}
+.container{
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+    padding: 10vh;
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
+}
