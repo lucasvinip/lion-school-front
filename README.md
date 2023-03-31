@@ -25,15 +25,15 @@ O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto 
    <h1>TO DO LIST:</h1>   
 </div>
 
-- [ ] Criou layout conforme designer feito no Figma?
-- [ ] Os botões dos cursos são dinâmicos?
-- [ ] Os cards são criados dinamicamente?
-- [ ] A página com informações dos cursos foi criada dinamicamente?
+- [x] Criou layout conforme designer feito no Figma?
+- [x] Os botões dos cursos são dinâmicos?
+- [x] Os cards são criados dinamicamente?
+- [x] A página com informações dos cursos foi criada dinamicamente?
 - [ ] O filtro por status está funcional?
-- [ ] Os nomes das variáveis, funções e arquivos tem valor semântico?
-- [ ] A maioria das funções seguem as boas práticas como responsabilidade única?
+- [x] Os nomes das variáveis, funções e arquivos tem valor semântico?
+- [x] A maioria das funções seguem as boas práticas como responsabilidade única?
 - [ ] Foi criado o layout responsivo no Figma?
-- [ ] Foi implementado a responsividade conforme planejado no Figma?
+- [x] Foi implementado a responsividade conforme planejado no Figma?
 - [ ] Foi criado o filtro por ano?
 
 
