@@ -8,7 +8,6 @@
 -  [TO DO LIST](#to-do-list)
 -  [TECNOLOGIAS APLICADAS](#tecnologias-aplicadas)
 -  [FERRAMENTAS](#ferramentas)
--  [CONCEITOS APLICADOS](#conceitos-aplicados)
 -  [COLABORADORES](#colaboradores)
    
 </div>
@@ -25,18 +24,17 @@ O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto 
    <img src="./img/logo-image.png" align="left" width="40" align="center"/>
    <h1>TO DO LIST:</h1>   
 </div>
-- Criou layout conforme designer feito no Figma?
-- Os botões dos cursos são dinâmicos?
-- Os cards são criados dinamicamente?
-- A página com informações dos cursos foi criada dinamicamente?
-- O filtro por status está funcional?
-- Os nomes das variáveis, funções e arquivos tem valor semântico?
-- A maioria das funções seguem as boas práticas como responsabilidade única?
-- Foi criado o layout responsivo no Figma?
-- Foi implementado a responsividade conforme planejado no Figma?
-- Foi criado o filtro por ano?
-<div>
 
+- [ ] Criou layout conforme designer feito no Figma?
+- [ ] Os botões dos cursos são dinâmicos?
+- [ ] Os cards são criados dinamicamente?
+- [ ] A página com informações dos cursos foi criada dinamicamente?
+- [ ] O filtro por status está funcional?
+- [ ] Os nomes das variáveis, funções e arquivos tem valor semântico?
+- [ ] A maioria das funções seguem as boas práticas como responsabilidade única?
+- [ ] Foi criado o layout responsivo no Figma?
+- [ ] Foi implementado a responsividade conforme planejado no Figma?
+- [ ] Foi criado o filtro por ano?
 
 
 <img src="./img/logo-image.png" align="left" width="40" align="center"/>
