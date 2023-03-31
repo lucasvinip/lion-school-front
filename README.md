@@ -1,4 +1,4 @@
-# <div align="center"><span style="color: blue">LION SCHOOL</span></div>
+# <div align="center"><span style="color: #3347B0">LION SCHOOL</span></div>
 
 <div>
    <img src="./img/logo-image.png" align="left" width="40" align="center"/>
@@ -25,17 +25,19 @@ O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto 
    <img src="./img/logo-image.png" align="left" width="40" align="center"/>
    <h1>TO DO LIST:</h1>   
 </div>
-
-- [x] Prototipar um site de Login
-- [x] Desenvolver usando o framework sorteado
-- [x] Implementar o clean code
-- [x] Tornar o projeto responsivo
-
+Criou layout conforme designer feito no Figma?
+ Os botões dos cursos são dinâmicos?
+ Os cards são criados dinamicamente?
+ A página com informações dos cursos foi criada dinamicamente?
+ O filtro por status está funcional?
+ Os nomes das variáveis, funções e arquivos tem valor semântico?
+ A maioria das funções seguem as boas práticas como responsabilidade única?
+ Foi criado o layout responsivo no Figma?
+ Foi implementado a responsividade conforme planejado no Figma?
+ Foi criado o filtro por ano?
 <div>
 
-| MOBILE                                     |             DESKTOP             |
-| :----------------------------------------- | :-----------------------------: |
-| <a href="https://viniciusnunes137.github.io/tailwind/"><img heigth="500" src="./img/mobile.png"/></a> | <a href="https://viniciusnunes137.github.io/tailwind/"><img src="./img/desktop.png" /></a> |
+
 
 <img src="./img/logo-image.png" align="left" width="40" align="center"/>
    <h1>TECNOLOGIAS APLICADAS</h1>   
