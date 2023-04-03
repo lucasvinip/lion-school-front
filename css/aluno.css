@@ -1,4 +1,4 @@
-.card_aluno{
+.card{
     height: 500px;
     width: 500px;
     background-color: red;
@@ -7,11 +7,11 @@
     align-items: center;
     justify-content: center;
 }
-.foto_aluno{
+.card__image{
     display: flex;
     height: 400px;
 }
-.container_aluno{
+.container{
     display: flex;
     gap: 4vw;
     flex-wrap: wrap;

@@ -4,10 +4,11 @@ import { getCursos } from "../API/apiCursos.js"
 
 
 
-const createCard = (curso) => {
+const createCard = (curso, index) => {
 
     const div = document.createElement('div')
     div.classList.add('card_button')
+    div.dataset.index = index
 
     const img = document.createElement('img')
     img.classList.add('icon')
@@ -20,8 +21,22 @@ const createCard = (curso) => {
     div.append(img, title)
 
     return div
+    
 
 }
+
+const getIndex = (event) =>{
+
+    event.preventDefault()
+
+}
+
+const cards = document.querySelectorAll('.card_button')
+cards.forEach(item => {
+    console.log(item);
+})
+
+console.log(cards)
 
 const carregarCard = async() => {
     const containerbuttons = document.querySelector('.container_buttons')

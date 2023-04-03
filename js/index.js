@@ -20,15 +20,21 @@ const createCard = (aluno) =>{
 
     return div
 
+    // if ( aluno.status == 'Cursando' ){
+    //     div.classList.add('blue')
+    // }else{
+    //     div.classList.add('yellow')
+    // }
 }
 
 
+
 const listarAlunos = async () =>{
-    const containerbuttons = document.querySelector('.container')
+    const containerbuttons = document.querySelector('.container_aluno')
     const  alunos = await getAlunos()
     
     const alunosCard = alunos.map(createCard)
     containerbuttons.replaceChildren(...alunosCard)
 }
 
-console.log(listarAlunos());
+listarAlunos()
