@@ -1,18 +1,21 @@
 'use strict'
 
-import { getCursos } from "../API/cursos"
+import { getCursos } from "../API/apiCursos.js"
+
+
 
 const createCard = (curso) => {
+
     const div = document.createElement('div')
     div.classList.add('card_button')
 
     const img = document.createElement('img')
-    img.alt= 'icone do button'
-    img.src = `${curso.cursos.icone_curso}`
+    img.classList.add('icon')
+    img.alt = 'icone do button'
+    img.src = `${curso.icone_curso}`
 
     const title = document.createElement('h2')
-    title.classList.add('nome_curso')
-    title.textContent = curso.cursos.nome_curso
+    title.textContent = curso.sigla_curso
 
     div.append(img, title)
 
@@ -20,10 +23,12 @@ const createCard = (curso) => {
 
 }
 
-const carregarCard = () => {
+const carregarCard = async() => {
     const containerbuttons = document.querySelector('.container_buttons')
-    const curso = getCursos.map(createCard)
-    containerbuttons.replaceChildren(...curso)
+    const  cursos = await getCursos()
+    
+    const cursosCard = cursos.map(createCard)
+    containerbuttons.replaceChildren(...cursosCard)
 }
 
 carregarCard()

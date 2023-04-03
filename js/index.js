@@ -1,44 +1,34 @@
 'use strict'
 
-// import { alunos } from './alunos.js'
-
-let cont = 0
+import { getAlunos } from "../API/apiAlunos.js"
 
 
-const criarCard = (aluno) =>{
+const createCard = (aluno) =>{
     
-
-    const card = document.createElement('div')
-    card.classList.add('card')
+    const div = document.createElement('div')
+    div.classList.add('card_aluno')
 
     const img = document.createElement('img')
-    img.classList.add('card__image')
-    img.src = `${aluno_nome}`
+    img.classList.add('foto_aluno')
+    img.alt = 'foto do aluno'
+    img.src = `${aluno.image_aluno}`
 
-    const nome = document.createElement('h5')
-    nome.classList.add('card__name')
-    nome.textContent = alunos[cont].nome
+    const title = document.createElement('h2')
+    title.textContent = aluno.nome_aluno
 
+    div.append(img, title)
 
-    card.append(img, nome)
-
-    cont++
-
-    return card
+    return div
 
 }
 
 
 const listarAlunos = async () =>{
-     const container = document.getElementById('container_buttons')
-    // const cards = alunos.map(criarCard)
-
-    const url = `http://localhost:8080/v1/lion-school/alunos`
-    const response = await fetch(url)
-    const cards = await response.json()
-
-
-    container.replaceChildren(...cards)
+    const containerbuttons = document.querySelector('.container')
+    const  alunos = await getAlunos()
+    
+    const alunosCard = alunos.map(createCard)
+    containerbuttons.replaceChildren(...alunosCard)
 }
 
-listarAlunos()
+console.log(listarAlunos());
