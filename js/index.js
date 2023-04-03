@@ -18,13 +18,15 @@ const createCard = (aluno) =>{
 
     div.append(img, title)
 
+    if ( aluno.status == 'Finalizado' ){
+        div.classList.add('blue')
+    }else{
+        div.classList.add('yellow')
+    }
+
     return div
 
-    // if ( aluno.status == 'Cursando' ){
-    //     div.classList.add('blue')
-    // }else{
-    //     div.classList.add('yellow')
-    // }
+    
 }
 
 

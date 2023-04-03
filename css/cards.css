@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
 }
-.blue {
+.blue{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.596);
     background-color: var(--primary-color);
 }
