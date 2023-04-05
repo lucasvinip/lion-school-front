@@ -21,6 +21,15 @@ A atividade tem como objetivo integrar as disciplinas de PWFE (Programação web
 O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto o back-end como o front-end.
 
 <div>
+  <img src="./img/logo-image.png" align="left" width="40" align="center"/>
+   <h1>DESIGN</h1>   
+</div>
+O Layout deste site foi baseado no Figma. 
+
+![Figma]()
+[Figma](https://www.figma.com/file/4tZ2R20VYMEA5FpQWFdBCQ/Lion-School-(Resposividade)?t=Q1Z0yewWMmk3BF24-6)
+
+<div>
    <img src="./img/logo-image.png" align="left" width="40" align="center"/>
    <h1>TO DO LIST:</h1>   
 </div>
@@ -32,7 +41,7 @@ O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto 
 - [ ] O filtro por status está funcional?
 - [x] Os nomes das variáveis, funções e arquivos tem valor semântico?
 - [x] A maioria das funções seguem as boas práticas como responsabilidade única?
-- [ ] Foi criado o layout responsivo no Figma?
+- [x] Foi criado o layout responsivo no Figma?
 - [x] Foi implementado a responsividade conforme planejado no Figma?
 - [ ] Foi criado o filtro por ano?
 
