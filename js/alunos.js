@@ -1,7 +1,15 @@
 'use strict'
 
+const criarTitle = () => {
+    let title = localStorage.getItem("nome do curso");
+    let titleCourse = document.querySelector(".title");
+    titleCourse.innerHTML = title;
+    
+}
 
 const createCard = (aluno) =>{
+
+    criarTitle()
     
     const div = document.createElement('div')
     div.classList.add('cards_aluno')

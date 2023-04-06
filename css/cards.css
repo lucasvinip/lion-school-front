@@ -1,3 +1,12 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+main p{
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 500;
+}
 .cards_aluno{
     height: 300px;
     width: 200px;
