@@ -1,20 +1,19 @@
 'use strict'
 
-import { getAlunos } from "../API/apiAlunos.js"
-
 
 const createCard = (aluno) =>{
     
     const div = document.createElement('div')
-    div.classList.add('card_aluno')
+    div.classList.add('cards_aluno')
 
     const img = document.createElement('img')
     img.classList.add('foto_aluno')
     img.alt = 'foto do aluno'
-    img.src = `${aluno.image_aluno}`
+    img.src = `${aluno.foto}`
 
     const title = document.createElement('h2')
-    title.textContent = aluno.nome_aluno
+    title.classList.add('nome_aluno')
+    title.textContent = aluno.nome
 
     div.append(img, title)
 
@@ -30,12 +29,17 @@ const createCard = (aluno) =>{
 }
 
 
-
 const listarAlunos = async () =>{
+    let siglaCurso = localStorage.getItem('sigla')
+    const url = `http://localhost:8080/v1/lion-school/alunos/curso?sigla=${siglaCurso}`
+
+    const response = await fetch(url)
+
+    const data = await response.json()
+
     const containerbuttons = document.querySelector('.container_aluno')
-    const  alunos = await getAlunos()
     
-    const alunosCard = alunos.map(createCard)
+    const alunosCard = data.curso.map(createCard)
     containerbuttons.replaceChildren(...alunosCard)
 }
 

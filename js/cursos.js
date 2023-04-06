@@ -2,13 +2,17 @@
 
 import { getCursos } from "../API/apiCursos.js"
 
-
-
 const createCard = (curso, index) => {
 
     const div = document.createElement('div')
     div.classList.add('card_button')
-    div.dataset.index = index
+    document.querySelector('card_button')
+    div.id = curso.sigla_curso
+    div.onclick = function () {
+        localStorage.setItem('sigla', div.id)
+        localStorage.setItem('nome do curso', curso.nome_curso)
+    }
+
 
     const img = document.createElement('img')
     img.classList.add('icon')
@@ -20,28 +24,32 @@ const createCard = (curso, index) => {
 
     div.append(img, title)
 
+    // document.querySelector('card_button')
+    // div.addEventListener('click', addLocalStorage)
+
     return div
-    
 
 }
+const addLocalStorage = (index) => {
+    if (index == 0){
+        getAlunosDs()
+    }else{
+        getAlunosRds()
+    }
+ }
 
-const getIndex = (event) =>{
 
-    event.preventDefault()
+// const addLocalStorage = (index) => {
+//     if (index == 0)
+//         localStorage.setItem('codigo', 'leonid')
+//     else
+//         localStorage.setItem('codigo', 'clara')
+// }
 
-}
-
-const cards = document.querySelectorAll('.card_button')
-cards.forEach(item => {
-    console.log(item);
-})
-
-console.log(cards)
-
-const carregarCard = async() => {
+const carregarCard = async () => {
     const containerbuttons = document.querySelector('.container_buttons')
-    const  cursos = await getCursos()
-    
+    const cursos = await getCursos()
+
     const cursosCard = cursos.map(createCard)
     containerbuttons.replaceChildren(...cursosCard)
 }

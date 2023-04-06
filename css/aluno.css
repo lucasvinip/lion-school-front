@@ -1,7 +1,6 @@
-.card{
+.card_aluno{
     height: 500px;
     width: 500px;
-    background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +9,9 @@
 .card__image{
     display: flex;
     height: 400px;
+}
+.nome_aluno{
+    color: #fff;
 }
 .container{
     display: flex;
