@@ -33,3 +33,12 @@ footer{
     justify-content: space-between;
     padding: 50px;
 }
+.social:hover{
+    color: var(--secondary-color);
+}
+.sair:hover{
+    color: var(--secondary-color);
+}
+.logo:hover{
+    color: var(--secondary-color);
+}

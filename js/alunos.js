@@ -13,6 +13,10 @@ const createCard = (aluno) =>{
     
     const div = document.createElement('div')
     div.classList.add('cards_aluno')
+    div.id = aluno.matricula
+    div.onclick = function (){
+        localStorage.setItem('matricula', div.id)
+    }
 
     const img = document.createElement('img')
     img.classList.add('foto_aluno')
@@ -35,6 +39,7 @@ const createCard = (aluno) =>{
 
     
 }
+
 
 
 const listarAlunos = async () =>{

@@ -30,13 +30,13 @@ const createCard = (curso, index) => {
     return div
 
 }
-const addLocalStorage = (index) => {
-    if (index == 0){
-        getAlunosDs()
-    }else{
-        getAlunosRds()
-    }
- }
+// const addLocalStorage = (index) => {
+//     if (index == 0){
+//         getAlunosDs()
+//     }else{
+//         getAlunosRds()
+//     }
+//  }
 
 
 // const addLocalStorage = (index) => {

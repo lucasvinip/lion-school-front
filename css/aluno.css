@@ -1,19 +1,22 @@
 .card_aluno{
-    height: 500px;
-    width: 500px;
+    height: 50vh;
+    /* width: 28vw; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
 }
-.card__image{
+.card_image{
     display: flex;
-    height: 400px;
+    height: 40vh;
 }
 .nome_aluno{
-    color: #fff;
+    color: var(--primary-color);
+    align-self: center;
+    justify-self: center;
 }
-.container{
+.container_aluno{
     display: flex;
     gap: 4vw;
     flex-wrap: wrap;
@@ -21,4 +24,84 @@
     max-width: 80vw;
     align-items: center;
     justify-content: center;
+}
+.card-nota {
+    display: flex;
+    height: 500px;
+    width: 700px;
+    padding: 60px;
+    justify-content: space-evenly;
+    gap: 34px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.25);
+    
+}
+.materia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.aluno {
+    width: 350px;
+    height: 350px;
+}
+.media-vermelha{
+    text-shadow: #2525 0.1em 0.1em 0.3em;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #C11010;
+}
+.media-amarela{
+    text-shadow: #2525 0.1em 0.1em 0.3em;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #E5B657;
+}
+.media-azul{
+    text-shadow: #2525 0.1em 0.1em 0.3em;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #3347B0;
+}
+.sigla {
+    text-shadow: #2525 0.1em 0.1em 0.3em;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--desktop-color);
+}
+
+.barra {
+    background-color: var(--barra-color);
+    height: 343px;
+    width: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.nota-baixa {
+    height: 20%;
+    border-radius: 6px 6px 0px 0px;
+
+    /*nota Vermelha*/
+    background-color: #C11010;
+    box-shadow: 0px 0px 10px 10px rgba(209, 1, 1, 0.25);
+}
+
+.nota-media {
+    height: 55%;
+    border-radius: 6px 6px 0px 0px;
+
+    /*nota Amarela*/
+    background-color: #E5B657;
+    box-shadow: 0px 0px 10px 10px rgba(255, 230, 0, 0.25);
+}
+
+.nota-alta {
+    height: 100%;
+    border-radius: 6px 6px 0px 0px;
+
+   /*nota Azul*/
+    background-color: #3347B0;
+    box-shadow: 0px 0px 10px 10px rgba(0, 60, 255, 0.25); 
 }
