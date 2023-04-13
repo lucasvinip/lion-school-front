@@ -82,7 +82,7 @@ const criarNotas = (diciplina) => {
 
 const listarAlunos = async () =>{
     let matricula = localStorage.getItem('matricula')
-    const url = `http://localhost:8080/v1/lion-school/alunos/matricula/${matricula}`
+    const url = `https://lion-school-99j4.onrender.com/v1/lion-school/alunos/matricula/${matricula}`
 
     const response = await fetch(url)
 

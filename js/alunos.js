@@ -70,7 +70,7 @@ const createCard = (aluno) => {
 
 const listarAlunos = async () => {
     let siglaCurso = localStorage.getItem('sigla')
-    const url = `http://localhost:8080/v1/lion-school/alunos/curso?sigla=${siglaCurso}`
+    const url = `https://lion-school-99j4.onrender.com/v1/lion-school/alunos/curso?sigla=${siglaCurso}`
 
     const response = await fetch(url)
 
