@@ -26,8 +26,8 @@ O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto 
 </div>
 O Layout deste site foi baseado no Figma. 
 
-![Figma]()
-[Figma](https://www.figma.com/file/4tZ2R20VYMEA5FpQWFdBCQ/Lion-School-(Resposividade)?t=Q1Z0yewWMmk3BF24-6)
+![Figma](./img/figma.png)
+[Link do Figma](https://www.figma.com/file/4tZ2R20VYMEA5FpQWFdBCQ/Lion-School-(Resposividade)?t=Q1Z0yewWMmk3BF24-6)
 
 <div>
    <img src="./img/logo-image.png" align="left" width="40" align="center"/>
@@ -38,7 +38,7 @@ O Layout deste site foi baseado no Figma.
 - [x] Os botões dos cursos são dinâmicos?
 - [x] Os cards são criados dinamicamente?
 - [x] A página com informações dos cursos foi criada dinamicamente?
-- [ ] O filtro por status está funcional?
+- [X] O filtro por status está funcional?
 - [x] Os nomes das variáveis, funções e arquivos tem valor semântico?
 - [x] A maioria das funções seguem as boas práticas como responsabilidade única?
 - [x] Foi criado o layout responsivo no Figma?
