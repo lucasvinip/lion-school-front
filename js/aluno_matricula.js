@@ -1,6 +1,9 @@
 'use strict'
 
 const createCard = (aluno) =>{
+
+    criarNotas()
+
     const div = document.createElement('div')
     div.classList.add('card_aluno')
     
@@ -17,10 +20,12 @@ const createCard = (aluno) =>{
     div.append(img, title)
 
     return div
-
+    
     
 }
+
 const criarNotas = (diciplina) => {
+
 
     const materia = document.createElement('div')
     materia.classList.add('materia')
@@ -29,32 +34,32 @@ const criarNotas = (diciplina) => {
 
     const nota = document.createElement('div')
     
-    if (diciplina.media >= 65) {
+    if (diciplina.curso_aluno.disciplinas.media >= 65) {
 
         media.classList.add("media-azul")
-        media.textContent = diciplina.media
+        media.textContent = diciplina.curso_aluno.media
 
         nota.classList.add("nota-alta");
-        nota.style.height = `${diciplina.media}%`
+        nota.style.height = `${diciplina.curso_aluno.disciplinas.media}%`
        
-    } else if (diciplina.media < 65 && diciplina.media >= 50) {
+    } else if (diciplina.curso_aluno.disciplinas.media < 65 && diciplina.curso_aluno.disciplinas.media >= 50) {
 
         media.classList.add("media-amarela")
-        media.textContent = diciplina.media
+        media.textContent = diciplina.curso_aluno.disciplinas.media
 
         nota.classList.add("nota-media");
-        nota.style.height =`${diciplina.media}%`
+        nota.style.height =`${diciplina.curso_aluno.disciplinas.media}%`
 
     
-    } else if (diciplina.media < 50) {
+    } else if (diciplina.curso_aluno.disciplinas.media< 50) {
 
         media.classList.add("media-vermelha") 
-        media.textContent = diciplina.media
+        media.textContent = diciplina.curso_aluno.disciplinas.media
 
         nota.classList.add("nota-baixa")
-        nota.style.height = `${diciplina.media}%`
+        nota.style.height = `${diciplina.curso_aluno.disciplinas.media}%`
     }
-  
+
 
     const barra = document.createElement('div')
     barra.classList.add('barra')
@@ -68,6 +73,8 @@ const criarNotas = (diciplina) => {
     barra.append(nota)
     
     return materia
+
+    
 
 }
 
@@ -84,6 +91,7 @@ const listarAlunos = async () =>{
     
     const alunosCard = data.matricula.map(createCard)
     containerbuttons.replaceChildren(...alunosCard)
+
 }
 
 listarAlunos()

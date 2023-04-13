@@ -1,4 +1,4 @@
-nav {
+.filter {
     display: flex;
     background-color: #BCC2E5;
     min-height: 50px;
@@ -6,7 +6,34 @@ nav {
     justify-content: space-between;
     color: var(--primary-color);
 }
+.select{
+    width: 100%;
+    height: 50px;
+    background-color: var(--filter-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 96px;
+  }
 
+  option {
+    background-color: var(--primary-color);
+    color: #FFF;
+  }
+  select {
+    background-color: var(--filter-color);
+    border: none;
+    border-bottom: 3px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 30px 4px 8px;
+    cursor: pointer;
+  
+  }
 .legenda {
     display: flex;
     gap: 12px;
@@ -23,46 +50,4 @@ nav {
     height: 20px;
     width: 20px;
     box-shadow: 0 5px 5px 0 rgb(28, 28, 29);
-}
-
-.menu {
-    padding-left: 66px;
-    list-style: none;
-    background-color: #BCC2E5;
-    float: left;
-}
-
-.menu li {
-    position: relative;
-    float: left;
-    border-right: 1px solid #c0c0c0;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
-}
-
-.menu li a:hover {
-    color: var(--secondary-color);
-}
-
-.menu li ul {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    background-color: var(--primary-color);
-    display: none;
-}
-
-.menu li:hover ul,
-.menu li.over ul {
-    display: block;
-}
-
-.menu li ul li {
-    display: block;
-    width: 150px;
 }

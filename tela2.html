@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/menuzinho.css">
     <script src="./js/alunos.js" defer type="module"></script>
-    <title></title>
+    <title>Lion School</title>
 </head>
 
 <body>
@@ -32,28 +32,29 @@
             <p>Sair</p>
         </a>
     </header>
-    <nav>
-        <ul class="menu">
-            <li><a href="#"> <span style="color: #3347B0;">Status</span>
-                <ul>
-                    <li><a href="#">Status</a></li>
-                    <li><a href="#">Finalizado</a></li>
-                    <li><a href="#">Cursando</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="legenda">
-            <p>LEGENDA</p>
-            <div class="legend">
-                <div class="leg" style="background-color: #3347B0;"></div>
-                <p>Cursando</p>
+  
+        <div class="filter_leg">
+            <div class="filter">
+                <div id="select">
+                  <select id="select-status" >
+                    <option value="status" >Status</option>
+                    <option value="Finalizado">Finalizado</option>
+                    <option value="Cursando">Cursando</option>
+                  </select>
+                  </div>
+            <div class="legenda">
+                <p>LEGENDA</p>
+                <div class="legend">
+                    <div class="leg" style="background-color: #3347B0;"></div>
+                    <p>Cursando</p>
+                </div>
+                <div class="legend">
+                    <div class="leg" style="background-color:#E5B657;"></div>
+                <p>Finalizado</p>
+                </div>
             </div>
-            <div class="legend">
-                <div class="leg" style="background-color:#E5B657;"></div>
-            <p>Finalizado</p>
-            </div>
-    </nav>
-    </div>
+       
+        </div>
     <main>
         <p class="title"></p>
         <a href="./tela3.html">
