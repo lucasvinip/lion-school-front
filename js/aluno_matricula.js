@@ -2,8 +2,6 @@
 
 const createCard = (aluno) =>{
 
-    criarNotas()
-
     const div = document.createElement('div')
     div.classList.add('card_aluno')
     
@@ -24,6 +22,7 @@ const createCard = (aluno) =>{
     
 }
 
+
 const criarNotas = (diciplina) => {
 
 
@@ -33,40 +32,43 @@ const criarNotas = (diciplina) => {
     const media = document.createElement('p')
 
     const nota = document.createElement('div')
+
+    const mediaALuno  = diciplina.curso_aluno.disciplina.media
     
-    if (diciplina.curso_aluno.disciplinas.media >= 65) {
+    
+    if (mediaALuno >= 65) {
 
         media.classList.add("media-azul")
-        media.textContent = diciplina.curso_aluno.media
+        media.textContent = mediaALuno
 
         nota.classList.add("nota-alta");
-        nota.style.height = `${diciplina.curso_aluno.disciplinas.media}%`
+        nota.style.height = `${mediaALuno}%`
        
-    } else if (diciplina.curso_aluno.disciplinas.media < 65 && diciplina.curso_aluno.disciplinas.media >= 50) {
+    } else if (mediaALuno < 65 && mediaALuno >= 50) {
 
         media.classList.add("media-amarela")
-        media.textContent = diciplina.curso_aluno.disciplinas.media
+        media.textContent = mediaALuno
 
         nota.classList.add("nota-media");
-        nota.style.height =`${diciplina.curso_aluno.disciplinas.media}%`
+        nota.style.height =`${mediaALuno}%`
 
     
-    } else if (diciplina.curso_aluno.disciplinas.media< 50) {
+    } else if (mediaALuno < 50) {
 
         media.classList.add("media-vermelha") 
-        media.textContent = diciplina.curso_aluno.disciplinas.media
+        media.textContent = mediaALuno
 
         nota.classList.add("nota-baixa")
-        nota.style.height = `${diciplina.curso_aluno.disciplinas.media}%`
+        nota.style.height = `${mediaALuno}%`
     }
-
+  
 
     const barra = document.createElement('div')
     barra.classList.add('barra')
 
     const sigla = document.createElement('p')
     sigla.classList.add('sigla')
-    // sigla.textContent = diciplina.nome
+    sigla.textContent = diciplina.nome.split(' ').map(word => word.charAt(0)).join('').toUpperCase()
 
 
     materia.append(media, barra, sigla)
@@ -74,9 +76,8 @@ const criarNotas = (diciplina) => {
     
     return materia
 
-    
-
 }
+
 
 
 const listarAlunos = async () =>{
@@ -91,6 +92,8 @@ const listarAlunos = async () =>{
     
     const alunosCard = data.matricula.map(createCard)
     containerbuttons.replaceChildren(...alunosCard)
+
+
 
 }
 

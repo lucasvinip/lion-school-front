@@ -1,3 +1,0 @@
-http://localhost:8080/v1/lion-school/alunos/curso?sigla=DS
-
-curso.foreach( (aluno) => createCard(aluno.nome)

@@ -24,27 +24,9 @@ const createCard = (curso, index) => {
 
     div.append(img, title)
 
-    // document.querySelector('card_button')
-    // div.addEventListener('click', addLocalStorage)
-
     return div
 
 }
-// const addLocalStorage = (index) => {
-//     if (index == 0){
-//         getAlunosDs()
-//     }else{
-//         getAlunosRds()
-//     }
-//  }
-
-
-// const addLocalStorage = (index) => {
-//     if (index == 0)
-//         localStorage.setItem('codigo', 'leonid')
-//     else
-//         localStorage.setItem('codigo', 'clara')
-// }
 
 const carregarCard = async () => {
     const containerbuttons = document.querySelector('.container_buttons')
