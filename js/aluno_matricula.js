@@ -4,7 +4,7 @@ const matricula = localStorage.getItem('matricula')
 
 const getStudentsInfo =async (matricula) =>{
 
-    const listStudents = async () =>{
+    const fetchData = async () =>{
         
         const url = `https://lion-school-99j4.onrender.com/v1/lion-school/alunos/matricula/${matricula}`
     
@@ -24,7 +24,7 @@ const getStudentsInfo =async (matricula) =>{
     const ctx = document.getElementById("myChart");
     
     const updateChart = async () =>{
-        const data = await listStudents();
+        const data = await fetchData();
     
         const disciplineName = data.disciplinas.map((index)=>{
             console.log(index.nome)
@@ -75,7 +75,7 @@ const getStudentsInfo =async (matricula) =>{
       });
       const createCard = (aluno) =>{
 
-        const data = await listStudents();
+        const data = await fetchData();
         const container = document.getElementById("informations");
 
         const div = document.createElement('div')
