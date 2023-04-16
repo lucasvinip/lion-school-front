@@ -22,62 +22,18 @@ const createCard = (aluno) =>{
     
 }
 
+const ctx = document.getElementById("myChart");
 
-const criarNotas = (diciplina) => {
+const updateChart = async () =>{
+    const data = await fetchData();
 
-
-    const materia = document.createElement('div')
-    materia.classList.add('materia')
-
-    const media = document.createElement('p')
-
-    const nota = document.createElement('div')
-
-    const mediaALuno  = diciplina.curso_aluno.disciplina.media
+    const disciplineName = data.disciplinas.map((index)=>{
+        console.log(index.nome)
+        return index.nome
+    })
     
-    
-    if (mediaALuno >= 65) {
-
-        media.classList.add("media-azul")
-        media.textContent = mediaALuno
-
-        nota.classList.add("nota-alta");
-        nota.style.height = `${mediaALuno}%`
-       
-    } else if (mediaALuno < 65 && mediaALuno >= 50) {
-
-        media.classList.add("media-amarela")
-        media.textContent = mediaALuno
-
-        nota.classList.add("nota-media");
-        nota.style.height =`${mediaALuno}%`
-
-    
-    } else if (mediaALuno < 50) {
-
-        media.classList.add("media-vermelha") 
-        media.textContent = mediaALuno
-
-        nota.classList.add("nota-baixa")
-        nota.style.height = `${mediaALuno}%`
-    }
-  
-
-    const barra = document.createElement('div')
-    barra.classList.add('barra')
-
-    const sigla = document.createElement('p')
-    sigla.classList.add('sigla')
-    sigla.textContent = diciplina.nome.split(' ').map(word => word.charAt(0)).join('').toUpperCase()
-
-
-    materia.append(media, barra, sigla)
-    barra.append(nota)
-    
-    return materia
 
 }
-
 
 
 const listarAlunos = async () =>{
