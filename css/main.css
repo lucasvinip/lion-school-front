@@ -27,11 +27,13 @@ main h1{
     font-size:2rem ;
     font-weight: 400;
     max-height: fit-content;
+    box-shadow:  12px 12px 4px rgba(51, 71, 176, 0.5);
 }
 .container_buttons{
     display: flex;
     flex-direction: column;
     gap: 32px;
+    
 }
 .buttons{
     display: flex;
