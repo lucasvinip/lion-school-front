@@ -66,7 +66,7 @@ const getStudentInformartions = (matricula) => {
   }
 
 
-  const studentsInfo = async (aluno) => {
+  const studentsInfo = async () => {
     const data = await fetchData();
     const container = document.getElementById("informations");
 
