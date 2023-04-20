@@ -5,10 +5,11 @@ const matricula = localStorage.getItem('matricula')
 const getStudentInformartions = (matricula) => {
 
   const fetchData = async () => {
-    const url = `https://lion-school-back.onrender.com/v1/lion-school/alunos/matricula/${matricula}`;
-    const response = await fetch(url);
+    const url = `https://teste-lion.onrender.com/v1/lion-school/status/disciplinas/${matricula}`;
+    // const url = `http://localhost:8080/v1/lion-school/status/disciplinas/${matriculaALuno}`;
+    const response = await fetch (url);
     const data = await response.json();
-    return { ...data }
+    return {...data}
   };
 
   const ctx = document.getElementById("myChart");
@@ -69,21 +70,28 @@ const getStudentInformartions = (matricula) => {
   const studentsInfo = async () => {
     const data = await fetchData();
     const container = document.getElementById("informations");
+  
+    const nomeCompleto = data.nome;
+    const palavras = nomeCompleto.split(" ");
+    const nomeFormatado = palavras.map(palavra => {
+      return palavra.charAt(0).toUpperCase() + palavra.slice(1).toLowerCase();
+    }).join(" ");
 
-    const studentProfile = document.createElement('div');
-    studentProfile.classList.add("card_aluno");
+    const studentProfile = document.getElementById("container");
+    studentProfile.classList.add("container");
 
     const studentImage = document.createElement('img')
     studentImage.classList.add('card_image')
-    studentImage.src = data.image_aluno
+    studentImage.src = data.foto
 
-    const studentName = document.createElement('h2')
-    studentName.classList.add('nome_aluno')
-    //studentName = data.nome_aluno
+    const studentName = document.createElement('p')
+    studentName.classList.add('name_student')
+    if(palavras.length >= 4){
+      studentName.style.fontSize = '18px'
+    }
+    studentName.textContent = nomeFormatado
 
-
-
-    studentProfile.append(studentName, studentImage)
+    studentProfile.append( studentImage, studentName) 
     container.replaceChildren(studentProfile, ctx);
   };
 

@@ -1,4 +1,4 @@
-.card_aluno{
+.container{
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -10,10 +10,11 @@
     display: flex;
     height: 40vh;
 }
-.nome_aluno{
+.name_student{
     color: var(--primary-color);
     align-self: center;
     justify-self: center;
+    font-weight: 500;
 }
 .container_aluno{
     display: flex;
