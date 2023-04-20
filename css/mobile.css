@@ -19,12 +19,16 @@
         font-size: 2rem;
         max-width: 100%;
     }
+    .informations{
+        flex-direction: column;
+    }
     footer{
         display: flex;
         flex-direction: column;
         height: 100%;
         gap: 100px;
     }
+    
 }
 @media(max-width: 960px){
     header{
@@ -43,6 +47,9 @@
     main h1{
         font-size: 2rem;
         max-width: 100%;
+    }
+    .informations{
+        flex-direction: row-reverse;
     }
     footer{
         display: flex;

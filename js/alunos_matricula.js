@@ -74,7 +74,7 @@ const getStudentInformartions = (matricula) => {
     const nomeCompleto = data.nome;
     const palavras = nomeCompleto.split(" ");
     const nomeFormatado = palavras.map(palavra => {
-      return palavra.charAt(0).toUpperCase() + palavra.slice(1).toLowerCase();
+      return palavra.charAt(0).toUpperCase() + palavra.slice(1).toUpperCase();
     }).join(" ");
 
     const studentProfile = document.getElementById("container");
