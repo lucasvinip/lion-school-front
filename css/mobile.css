@@ -19,8 +19,14 @@
         font-size: 2rem;
         max-width: 100%;
     }
+    .container_alunos{
+        padding: 0px;
+    }
     .informations{
         flex-direction: column;
+    }
+    .container{
+        max-width: 600px;
     }
     footer{
         display: flex;
@@ -49,7 +55,7 @@
         max-width: 100%;
     }
     .informations{
-        flex-direction: row-reverse;
+        flex-direction: column;
     }
     footer{
         display: flex;
